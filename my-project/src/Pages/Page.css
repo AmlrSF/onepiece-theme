@@ -1,0 +1,89 @@
+/* Home.css */
+.background-container {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../assets/kaido1.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+
+.permanent-marker {
+  font-family: "Permanent Marker", cursive;;
+  font-style: normal;
+}
+
+.link {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+.link::before,
+.link::after {
+ content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+.link::before {
+  background: linear-gradient(92deg, #ff5956 2.87%, #ee1e38 96.18%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.link::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  background: linear-gradient(92deg, #ff5956 2.87%, #ee1e38 96.18%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.link:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+.link:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.link span {
+  display: inline-block;
+  transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.link:hover span {
+  transform: translate3d(-200%, 0, 0);
+}
+.social-icons a{
+  transition: 0.1s ease-in-out;
+}
+.social-icons a:hover {
+  transform: scale(1.25);
+}
