@@ -87,3 +87,161 @@
 .social-icons a:hover {
   transform: scale(1.25);
 }
+
+/* Overview Page */
+
+.background-container-overview{
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url('../assets/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-container-overview::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.overview-container {  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "sideBar  item1  item2  item3  item4"
+    "sideBar  stats1 stats1 stats2 stats2"
+    "sideBar  stats1 stats1 stats2 stats2"
+    "sideBar  charts charts charts charts"
+    "sideBar  charts charts charts charts"
+}
+
+.sideBar { grid-area: sideBar; }
+
+.item1 { grid-area: item1; }
+
+.item2 { grid-area: item2; }
+
+.item3 { grid-area: item3; }
+
+.item4 { grid-area: item4; }
+
+.stats1 { grid-area: stats1; }
+
+.stats2 { grid-area: stats2; }
+
+.charts { grid-area: charts; }
+
+.overview-container > div {
+  background-color: rgb(34, 39, 44);
+}
+
+/* Tablet landscape and above */
+@media (max-width: 980px) {
+  .overview-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      "sideBar  sideBar"
+      "item1 item2"
+      "item3 item4"
+      "stats1 stats1"
+      "stats2 stats2"
+      "charts charts";
+  }
+}
+
+
+/* Tablet portrait and below */
+@media (max-width: 768px) {
+  .overview-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas:
+      "sideBar"
+      "item1"
+      "item2"
+      "item3"
+      "item4"
+      "stats1"
+      "stats2"
+      "charts";
+  }
+}
+
+
+.stats1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 20px;
+}
+.stats1 .slide {
+  display: flex;
+  align-items: center;
+  
+}
+.stats1 .slide p {
+  font-size: 14px;
+  font-weight: 500;
+  width: 50px;
+  color: white;
+  margin: 0;
+}
+.bar-container {
+  position: relative;
+  height: 8px;
+  width: 250px;
+  background: #555;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.bar {
+  position: absolute;
+  height: 100%;
+  
+  display: block;
+  border-radius: 5px;
+  width: 0;
+}
+
+.overview-container > div{
+
+  border-radius: 20px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+
+.profile-pic {
+  position: relative; /* Ensures the pseudo-element is positioned relative to .profile-pic */
+  width: 300px;
+  height: 250px;
+  overflow: hidden; /* Ensures the pseudo-element doesn't overflow the container */
+}
+
+.profile-pic::after {
+  content: "";
+  background: url("../assets/pngwing.com.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1; /* Ensure it's behind other content */
+}

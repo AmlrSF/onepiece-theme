@@ -4,7 +4,8 @@ const Layout = () => {
   return (
     <>
       <div className="h-[100%] w-[100%]">
-        <nav className="absolute sm:block hidden z-10 top-[50%] translate-y-[-50%] left-[15px] ">
+        <nav className="absolute sm:block hidden z-20 top-[50%] 
+        translate-y-[-50%] left-[15px] ">
           <ul className="flex flex-col gap-[7px]">
             <li>
               <Link class="text-white font-medium link"  data-replace="Home" to="/"><span>Home</span></Link>
@@ -23,8 +24,8 @@ const Layout = () => {
             </li>
           </ul>
         </nav>
-        <nav className="absolute block sm:hidden z-10 bottom-[10px] left-[50%] translate-x-[-50%]">
-          <ul className="flex items-center gap-10 ">
+        <nav className="absolute block sm:hidden w-full bottom-0 z-20  left-[50%] translate-x-[-50%]">
+          <ul className="flex items-center h-full gap-10 w-full justify-center bg-black p-2 rounded-lg ">
             <li>
               <Link class="text-white font-medium link"  data-replace="Home" to="/"><span>Home</span></Link>
             </li>
