@@ -95,7 +95,7 @@ const Overview = () => {
 
   return (
     <div className="background-container-overview  flex justify-center w-full overflow-auto min-h-[100vh] p-10
-      items-center p-6">
+      items-center ">
       <div class="overview-container z-10 h-[650px] w-[1000px] ">
 
         <div className="sideBar flex flex-col items-center justify-between  p-5 ">

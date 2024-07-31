@@ -4,6 +4,11 @@ import Contact from './Contact';
 import Overview from './Overview';
 import Home from './Home';
 import NoPage from './NoPage';
+import Design from './design';
+import FrontEnd from './frontEnd';
+import Backend from './backend';
+
+
 
 
 export {
@@ -12,5 +17,8 @@ export {
     Contact,
     Overview,
     Home,
-    NoPage
+    NoPage,
+    Design,
+    FrontEnd,
+    Backend
 }

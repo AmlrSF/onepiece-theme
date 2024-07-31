@@ -18,13 +18,13 @@
   height: 100%;
   width: 100%;
   background-color: #000;
-  opacity: 0.8;
+  opacity: 0.5;
   z-index: 1;
 }
 
 
 .permanent-marker {
-  font-family: "Permanent Marker", cursive;;
+  font-family: "Permanent Marker", cursive;
   font-style: normal;
 }
 
@@ -36,11 +36,12 @@
 
 .link::before,
 .link::after {
- content: '';
+  content: '';
   position: absolute;
   width: 100%;
   left: 0;
 }
+
 .link::before {
   background: linear-gradient(92deg, #ff5956 2.87%, #ee1e38 96.18%);
   background-clip: text;
@@ -52,6 +53,7 @@
   transform: scaleX(0);
   transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
 }
+
 .link::after {
   content: attr(data-replace);
   height: 100%;
@@ -69,6 +71,7 @@
   transform-origin: 0% 50%;
   transform: scaleX(1);
 }
+
 .link:hover::after {
   transform: translate3d(0, 0, 0);
 }
@@ -81,16 +84,18 @@
 .link:hover span {
   transform: translate3d(-200%, 0, 0);
 }
-.social-icons a{
+
+.social-icons a {
   transition: 0.1s ease-in-out;
 }
+
 .social-icons a:hover {
   transform: scale(1.25);
 }
 
 /* Overview Page */
 
-.background-container-overview{
+.background-container-overview {
   min-height: 100vh;
   width: 100vw;
   background-image: url('../assets/hero.jpg');
@@ -106,14 +111,14 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 220vh;
   width: 100%;
   background-color: #000;
-  opacity: 0.6;
+  opacity: 0.5;
   z-index: 1;
 }
 
-.overview-container {  
+.overview-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1.1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -127,23 +132,39 @@
     "sideBar  charts charts charts charts"
 }
 
-.sideBar { grid-area: sideBar; }
+.sideBar {
+  grid-area: sideBar;
+}
 
-.item1 { grid-area: item1; }
+.item1 {
+  grid-area: item1;
+}
 
-.item2 { grid-area: item2; }
+.item2 {
+  grid-area: item2;
+}
 
-.item3 { grid-area: item3; }
+.item3 {
+  grid-area: item3;
+}
 
-.item4 { grid-area: item4; }
+.item4 {
+  grid-area: item4;
+}
 
-.stats1 { grid-area: stats1; }
+.stats1 {
+  grid-area: stats1;
+}
 
-.stats2 { grid-area: stats2; }
+.stats2 {
+  grid-area: stats2;
+}
 
-.charts { grid-area: charts; }
+.charts {
+  grid-area: charts;
+}
 
-.overview-container > div {
+.overview-container>div {
   background-color: rgb(34, 39, 44);
 }
 
@@ -189,11 +210,13 @@
   gap: 5px;
   padding: 20px;
 }
+
 .stats1 .slide {
   display: flex;
   align-items: center;
-  
+
 }
+
 .stats1 .slide p {
   font-size: 14px;
   font-weight: 500;
@@ -201,6 +224,7 @@
   color: white;
   margin: 0;
 }
+
 .bar-container {
   position: relative;
   height: 8px;
@@ -209,16 +233,17 @@
   border-radius: 5px;
   overflow: hidden;
 }
+
 .bar {
   position: absolute;
   height: 100%;
-  
+
   display: block;
   border-radius: 5px;
   width: 0;
 }
 
-.overview-container > div{
+.overview-container>div {
 
   border-radius: 20px;
   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
@@ -226,10 +251,12 @@
 
 
 .profile-pic {
-  position: relative; /* Ensures the pseudo-element is positioned relative to .profile-pic */
+  position: relative;
+  /* Ensures the pseudo-element is positioned relative to .profile-pic */
   width: 300px;
   height: 250px;
-  overflow: hidden; /* Ensures the pseudo-element doesn't overflow the container */
+  overflow: hidden;
+  /* Ensures the pseudo-element doesn't overflow the container */
 }
 
 .profile-pic::after {
@@ -243,5 +270,288 @@
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 1; /* Ensure it's behind other content */
+  z-index: 1;
+  /* Ensure it's behind other content */
 }
+
+
+.background-container-skills {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../assets/skills.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-container-skills::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 190vh;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.violet-gradient {
+  background: #804dee;
+  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  background: -webkit-linear-gradient(-90deg,
+      #804dee 0%,
+      rgba(60, 51, 80, 0) 100%);
+}
+
+.black-gradient {
+  background: #000000;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right,
+      #434343,
+      #000000);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right,
+      #434343,
+      #000000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.green-pink-gradient {
+  background: "#00cea8";
+  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+}
+
+.background-container-projects {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../assets/projects.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-container-projects::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 1;
+
+
+
+
+}
+
+
+
+
+
+
+.cards {
+  display: flex;
+  justify-content: center;
+  /* Change from justify-items to justify-content */
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  cursor: pointer;
+}
+
+.cards>div .card {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  perspective: 1000px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  /* Default shadow for the card */
+  transition: box-shadow 0.5s ease, transform 0.5s ease;
+}
+
+.cards>div .card img {
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  display: block;
+  backface-visibility: hidden;
+  /* Ensures backface is not visible */
+}
+
+.cards>div .card p {
+  position: absolute;
+  bottom: 25px;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Permanent Marker", cursive;
+  font-style: normal;
+  font-size: 35px;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Applying the hover effect to rotate the card */
+.cards>div .card:hover img {
+  transform: rotateX(15deg);
+  /* Rotate image on hover */
+}
+
+/* Increase shadow size and offset on hover to enhance 3D effect */
+.cards>div .card:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  /* Larger shadow on hover */
+}
+
+
+.cards>div .card::before,
+.cards>div .charsImages::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 10rem;
+  transition: all 0.5s ease 0s;
+  position: absolute;
+  left: 0px;
+
+}
+
+
+.cards>div .card:hover::before,
+.cards>div .charsImages:hover::before {
+  position: absolute;
+  top: 9.5px;
+  left: 1px;
+  z-index: 100;
+  opacity: 1;
+  width: 98%;
+  transform: rotateX(15deg);
+  /* Rotate image on hover */
+  background-image: linear-gradient(to top, transparent 46%, rgba(12, 13, 19, 0.5) 68%, rgba(12, 13, 19, 0.8) 97%);
+}
+
+
+.cards>div .card:hover::after,
+.cards>div .charsImages:hover::after {
+  position: absolute;
+  bottom: -5px;
+  z-index: 1;
+  opacity: 1;
+  width: 105%;
+  left: -8px;
+  transform: rotateX(15deg);
+  /* Rotate image on hover */
+  background-image: linear-gradient(transparent 16%, rgba(12, 13, 19, 0.5) 38%, rgba(12, 13, 19, 0.8) 97%);
+}
+
+
+.cards>div {
+  position: relative;
+}
+
+.charsImages {
+  position: absolute;
+  bottom: 0;
+  width: 250px;
+  height: 420px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -150px;
+  opacity: 0;
+  z-index: -10;
+  transition: all 0.5s ease 0s;
+}
+
+
+.cards>div:hover .charsImages {
+  z-index: 20;
+  bottom: 60px;
+  opacity: 1;
+}
+
+.bgproject {
+
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../assets/bgProject.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 100px;
+  overflow: hidden;
+}
+
+.bgproject::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+
+.grid-proj {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100vw;
+}
+
+.background-container-contact {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../assets/contact.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-container-contact::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.4;
+  z-index: 1;
+
+}
+.image {
+  animation: bounce 1.5s alternate cubic-bezier(.5, 0.05, 1, .5) infinite;
+}
+
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, -20px, 0); /* Adjust the -20px value to control the bounce height */
+  }
+}
+
+

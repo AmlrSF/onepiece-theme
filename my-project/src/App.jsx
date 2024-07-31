@@ -7,7 +7,10 @@ import {
   Skills,
   Overview,
   Project,
-  NoPage
+  NoPage,
+  Design,
+  FrontEnd,
+  Backend
 } from './Pages/index';
 
 import Layout from "./Containers/Layout";
@@ -25,6 +28,9 @@ function App() {
             <Route path="Skills" element={<Skills />} />
             <Route path="Projects" element={<Project />} />
             <Route path="Overview" element={<Overview />} />
+            <Route path="backend" element={<Backend />} />
+            <Route path="frontEnd" element={<FrontEnd />} />
+            <Route path="design" element={<Design />} />
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
