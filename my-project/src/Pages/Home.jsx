@@ -92,7 +92,7 @@ const Home = () => {
           <a target="_blank" href="" className='h-[35px] w-[35px] rounded-full overflow-hidden'>
             <img src={figma} alt="figma" className='w-full h-full' />
           </a>
-          <a target="_blank" href="https://www.linkedin.com/in/amir-souaf-31232b264/" className='h-[35px] w-[35px] rounded-full overflow-hidden'>
+          <a target="_blank" href="" className='h-[35px] w-[35px] rounded-full overflow-hidden'>
             <img src={linkedin} alt="linkedin" className='w-full h-full' />
           </a>
         </motion.div>

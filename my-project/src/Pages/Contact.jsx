@@ -41,7 +41,7 @@ const Contact = () => {
             <a target="_blank" href="https://github.com/AmlrSF" className='h-[35px]  w-[35px]  rounded-full overflow-hidden'>
               <img src={ds} alt="twitter" className='w-full h-full' />
             </a>
-            <a target="_blank" href="https://www.linkedin.com/in/amir-souaf-31232b264/" className='h-[35px]  w-[35px]  rounded-full overflow-hidden'>
+            <a target="_blank" href="" className='h-[35px]  w-[35px]  rounded-full overflow-hidden'>
               <img src={linkedin} alt="twitter" className='w-full h-full' />
             </a>
           </div>
